@@ -1,0 +1,82 @@
+<h1 class="text-center m-4">List des personnages</h1>
+<section class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-footer">
+                <h5 class="card-title text-center">{{ tabPersonnages[0].nom }}</h5>
+                </div>
+                <div class="card-body">
+                    <i class="card-img-top fa-2x rounded-circle text-center fa-solid {{ tabPersonnages[0].icon }}"></i>
+                    <br>
+                    <div class="text-center">
+                        <span class="badge rounded-pill bg-secondary text-center">{{ tabPersonnages[0].nb }} Abonnés</span>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [(ngModel)]="tabPersonnages[0].majeur" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Majeur
+                        </label>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" (click)="abonner(0)"><i class="fas fa-pencil-alt"></i> S'abonner</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-footer">
+                <h5 class="card-title text-center">{{ tabPersonnages[1].nom }}</h5>
+                </div>
+                <div class="card-body">
+                    <i class="card-img-top fa-2x rounded-circle text-center {{ tabPersonnages[1].icon }}"></i>
+                    <br>
+                    <div class="text-center">
+                        <span class="badge rounded-pill bg-secondary text-center">{{ tabPersonnages[1].nb }} Abonnés</span>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="tabPersonnages[1].majeur" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Majeur
+                        </label>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" (click)="abonner(1)"><i class="fas fa-pencil-alt"></i> S'abonner</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-footer">
+                <h5 class="card-title text-center">{{ tabPersonnages[2].nom }}</h5>
+                </div>
+                <div class="card-body">
+                    <i class="card-img-top fa-2x rounded-circle text-center fa-solid {{ tabPersonnages[2].icon }}"></i>
+                    <br>
+                    <div class="text-center">
+                        <span class="badge rounded-pill bg-secondary text-center">{{ tabPersonnages[2].nb }} Abonnés</span>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="tabPersonnages[2].majeur" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Majeur
+                        </label>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" (click)="abonner(2)"><i class="fas fa-pencil-alt"></i> S'abonner</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+<hr class="border border-primary border-1 opacity-75">
+<br>
+<p>{{ nbMajor() }}</p>
+<br><br>
+</section>
